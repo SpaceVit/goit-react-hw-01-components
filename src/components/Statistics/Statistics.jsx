@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import { Box } from 'components/Box';
-import { Title, StatisticsWrap } from './Statistics.styled';
+import { Title, StatisticsWrap, StatList, StatItem } from './Statistics.styled';
 
 export default function Statistics({ title, stats }) {
   return (
@@ -8,14 +8,14 @@ export default function Statistics({ title, stats }) {
       <StatisticsWrap>
         {title && <Title>{title}</Title>}
 
-        <ul class="stat-list">
+        <StatList>
           {stats.map(({ id, label, percentage }) => (
-            <li class="item" key={id}>
-              <span class="label">{label}</span>
-              <span class="percentage">{percentage}</span>
-            </li>
+            <StatItem key={id}>
+              <span>{label}</span>
+              <span>{percentage}</span>
+            </StatItem>
           ))}
-        </ul>
+        </StatList>
       </StatisticsWrap>
     </Box>
   );
