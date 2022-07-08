@@ -3,6 +3,7 @@ export const theme = {
     mainText: '#e6e6ff',
     secondaryText: '#000000',
     cardBackground: '#b3cce6',
+    secondaryCardItemBackground: '#ffffff',
     cardItemBackground: '#8080ff',
     avatarBackground: '#B5C6EC',
   },
