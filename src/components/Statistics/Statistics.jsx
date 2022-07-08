@@ -7,7 +7,6 @@ export default function Statistics({ title, stats }) {
     <Box as="section" py={3} width="100%">
       <StatisticsWrap>
         {title && <Title>{title}</Title>}
-
         <StatList>
           {stats.map(({ id, label, percentage }) => (
             <StatItem key={id}>

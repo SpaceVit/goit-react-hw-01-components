@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import { Box } from 'components/Box';
 import {
   ProfileWrap,
   Description,
@@ -14,29 +15,31 @@ import {
 
 export default function Profile({ username, tag, location, avatar, stats }) {
   return (
-    <ProfileWrap>
-      <Description>
-        <Avatar src={avatar} alt="User avatar" />
-        <Name>{username}</Name>
-        <Tag>@{tag}</Tag>
-        <Location>{location}</Location>
-      </Description>
+    <Box as="section" py={3} width="100%">
+      <ProfileWrap>
+        <Description>
+          <Avatar src={avatar} alt="User avatar" />
+          <Name>{username}</Name>
+          <Tag>@{tag}</Tag>
+          <Location>{location}</Location>
+        </Description>
 
-      <StatList>
-        <StatItem>
-          <Label>Followers</Label>
-          <Quantity>{stats.followers}</Quantity>
-        </StatItem>
-        <StatItem>
-          <Label>Views</Label>
-          <Quantity>{stats.views}</Quantity>
-        </StatItem>
-        <StatItem>
-          <Label>Likes</Label>
-          <Quantity>{stats.likes}</Quantity>
-        </StatItem>
-      </StatList>
-    </ProfileWrap>
+        <StatList>
+          <StatItem>
+            <Label>Followers</Label>
+            <Quantity>{stats.followers}</Quantity>
+          </StatItem>
+          <StatItem>
+            <Label>Views</Label>
+            <Quantity>{stats.views}</Quantity>
+          </StatItem>
+          <StatItem>
+            <Label>Likes</Label>
+            <Quantity>{stats.likes}</Quantity>
+          </StatItem>
+        </StatList>
+      </ProfileWrap>
+    </Box>
   );
 }
 
